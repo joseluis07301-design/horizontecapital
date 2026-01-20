@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Finanzas del Emprendedor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+}
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  padding: 15px 0;
+  z-index: 1000;
+}
+nav {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+nav a {
+  color: #f5c77a;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+h1, h2, h3 {
+  color: #f5c77a;
+}
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("https://images.unsplash.com/photo-1554224155-6726b3ff858f") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hero div {
+  width: 100%;
+}
+.hero h1 {
+  font-size: 3rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+}
+.simulator {
+  background: #1c1c1c;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: none;
+}
+button {
+  background: #f5c77a;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+footer {
+  background: #000;
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#personas">Personas</a>
+    <a href="#vos">Vos y lo que querés</a>
+    <a href="#quienes">Quiénes somos</a>
+    <a href="#contacto">Contáctenos</a>
+  </nav>
+</header>
+
+<!-- INICIO -->
+<section id="inicio" class="hero">
+  <div>
+    <h1>Finanzas para Emprendedores Conscientes</h1>
+    <p>Menos ansiedad. Más claridad. Decisiones financieras con foco y horizonte.</p>
+  </div>
+</section>
+
+<!-- PERSONAS -->
+<section id="personas">
+  <h2>Personas como vos</h2>
+  <div class="grid">
+    <div class="card">Emprendedores que trabajan mucho y sienten desorden financiero.</div>
+    <div class="card">Personas con ingresos variables que quieren estabilidad.</div>
+    <div class="card">Quienes buscan crecer sin vivir apagando incendios.</div>
+  </div>
+</section>
+
+<!-- VOS -->
+<section id="vos">
+  <h2>Vos y lo que querés</h2>
+  <p>Querés claridad, calma y una estrategia financiera que acompañe tu negocio y tu vida.</p>
+
+  <h3>Termómetro financiero</h3>
+  <div class="grid">
+    <div class="card">Decisión<br>Elegís con información, no con miedo.</div>
+    <div class="card">Foco<br>Sabés dónde poner tu energía y tu dinero.</div>
+    <div class="card">Asignación<br>Distribuís ingresos con intención.</div>
+    <div class="card">Calma<br>Dejás de reaccionar.</div>
+    <div class="card">Horizonte<br>Construís a largo plazo.</div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section>
+  <h2>Mapa de las 5 etapas</h2>
+  <div class="grid">
+    <div class="card">1. Caos financiero</div>
+    <div class="card">2. Orden básico</div>
+    <div class="card">3. Control consciente</div>
+    <div class="card">4. Expansión estratégica</div>
+    <div class="card">5. Libertad financiera</div>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<section>
+  <h2>Toolkit – Simulador de aporte</h2>
+  <div class="simulator">
+    <p>¿Cuánto podrías construir con constancia?</p>
+    <input type="number" id="aporte" placeholder="Aporte mensual">
+    <button onclick="simular()">Simular</button>
+    <p id="resultado"></p>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section>
+  <h2>Reseñas</h2>
+  <div class="grid">
+    <div class="card">“Hoy entiendo mi dinero y mis decisiones.” – Martín</div>
+    <div class="card">“Dejé de improvisar y empecé a construir.” – Paula</div>
+    <div class="card">“Esto me dio calma y claridad.” – Lucía</div>
+  </div>
+</section>
+
+<!-- QUIENES SOMOS -->
+<section id="quienes">
+  <h2>Quiénes somos</h2>
+  <p>Somos un espacio creado para emprendedores que quieren una relación sana con el dinero, basada en conciencia, estrategia y largo plazo.</p>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h2>Contáctenos</h2>
+  <form>
+    <input type="text" placeholder="Nombre">
+    <input type="email" placeholder="Email">
+    <textarea rows="4" placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Finanzas del Emprendedor
+</footer>
+
+<script>
+function simular() {
+  const aporte = document.getElementById("aporte").value;
+  if (aporte > 0) {
+    document.getElementById("resultado").innerText =
+      "En un año podrías aportar $" + (aporte * 12);
+  }
+}
+</script>
+
+</body>
+</html>
